@@ -1,0 +1,13 @@
+# Portfolio Files
+node_modules/
+.DS_Store
+*.log
+.env
+.vscode/
+.idea/
+
+# Keep these files
+!CNAME
+!vercel.json
+!netlify.toml
+!package.json

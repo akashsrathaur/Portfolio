@@ -1,0 +1,12 @@
+{
+  "name": "akash-portfolio",
+  "version": "1.0.0",
+  "description": "Personal portfolio website for Akash Rathaur",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "start": "python3 -m http.server 8000"
+  },
+  "keywords": ["portfolio", "personal-website"],
+  "author": "Akash Rathaur",
+  "license": "MIT"
+}
