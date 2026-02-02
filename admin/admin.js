@@ -437,6 +437,29 @@ function clearAllData() {
     }
 }
 
+// Firebase Migration
+async function migrateToFirebase() {
+    if (!window.FirebaseStorage || !FirebaseStorage.isAvailable()) {
+        alert('⚠️ Firebase is not configured!\n\nPlease follow these steps:\n1. Create a Firebase project at console.firebase.google.com\n2. Enable Firestore and Storage\n3. Copy your config to firebase-config.js\n4. Refresh this page and try again');
+        return;
+    }
+
+    if (!confirm('This will migrate all your localStorage data to Firebase.\n\nYour local data will remain as backup.\n\nContinue?')) {
+        return;
+    }
+
+    try {
+        const success = await FirebaseStorage.migrateFromLocalStorage();
+        if (success) {
+            loadAllData();
+        }
+    } catch (error) {
+        console.error('Migration error:', error);
+        alert('Migration failed: ' + error.message);
+    }
+}
+
+
 // Close modals when clicking outside
 window.addEventListener('click', (e) => {
     if (e.target.classList.contains('modal')) {

@@ -155,6 +155,43 @@ Then visit:
 3. Make changes
 4. Changes appear instantly on the main site
 
+## Firebase Setup (Cloud Storage)
+
+Your portfolio now supports **Firebase** for cloud-based data storage! This means your data persists across all devices and browsers.
+
+### Why Use Firebase?
+- ✅ **Cloud storage** - Access your data from anywhere
+- ✅ **No storage limits** (within generous free tier)
+- ✅ **Image hosting** - Professional CDN for images
+- ✅ **Real-time sync** - Changes sync across devices
+- ✅ **100% Free** for personal portfolios
+
+### Setup Instructions
+
+**📖 See [FIREBASE_SETUP.md](FIREBASE_SETUP.md) for detailed step-by-step instructions**
+
+Quick steps:
+1. Create a free Firebase project at [console.firebase.google.com](https://console.firebase.google.com)
+2. Enable Firestore Database and Firebase Storage
+3. Copy your Firebase configuration
+4. Update `firebase-config.js` with your credentials
+5. Go to admin panel → Settings → Click "Migrate to Firebase"
+6. Done! Your data is now in the cloud ☁️
+
+### Firebase vs localStorage
+
+| Feature | localStorage | Firebase |
+|---------|-------------|----------|
+| Storage Location | Browser only | Cloud |
+| Access from other devices | ❌ No | ✅ Yes |
+| Survives cache clear | ❌ No | ✅ Yes |
+| Image storage limit | ~5-10MB | 5GB (free tier) |
+| Setup time | 0 min | ~5 min |
+| Cost | Free | Free |
+
+**Recommendation**: Set up Firebase for a professional, production-ready portfolio!
+
+
 ## Troubleshooting
 
 ### Admin panel shows 404
